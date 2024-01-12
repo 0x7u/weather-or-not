@@ -1,0 +1,16 @@
+<main class="bg-white dark:bg-gray-900 p-6 rounded-lg shadow-lg w-full max-w-2xl mx-auto">
+    <header class="flex items-center justify-between mb-6">
+        <h1 class="text-2xl font-bold">Weather Forecast</h1>
+    </header>
+    <div class="flex overflow-x-scroll divide-x">
+        {% for forecast in forecasts %}
+        <div class="flex justify-between text-left px-4 min-w-52">
+            <div>
+                <p class="text-sm text-gray-500 dark:text-gray-400">{{forecast.datetime}}</p>
+                <p class="font-semibold">{{forecast.status}}</p>
+            </div>
+            <p class="text-lg">{{forecast.temperature}}°C</p>
+        </div>
+        {% endfor %}
+    </div>
+</main>
